@@ -1,0 +1,349 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header and Navigation */
+  header {
+    background-color: #333;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #ff5733;
+  }
+
+/* Hero Section Layout */
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('//images/hero-image2.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    padding: 20px;
+  }
+
+  /* Dimming Effect */
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity for dimming */
+    z-index: 1;
+  }
+
+  /* Content Section */
+  .hero-content {
+    flex: 1;
+    z-index: 2; /* Keeps content above the dimming layer */
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* Image Section */
+  .hero-image {
+    flex: 1;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Button Styling */
+  button {
+    background-color: #ff6a00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  /* Button Hover Effect */
+  button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+  }
+
+
+  
+  /* Stats Section */
+  #stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  #stats div {
+    text-align: center;
+  }
+  
+  #stats h3 {
+    font-size: 2rem;
+    color: #ff5733;
+  }
+  
+  #stats p {
+    color: #777;
+  }
+  #stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color:#e6e0dc;
+  }
+
+  .icon-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .logo-container {
+      width: 60px;
+      height: 60px;
+      border: 2px solid rgb(19, 14, 4);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      background-color: white;
+  }
+
+  .logo-container i {
+      font-size: 30px;
+      color: rgb(64, 37, 52);
+  }
+
+
+
+
+
+  /* About Section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.about-text {
+    flex: 3;
+    padding: 30px;
+    font-size: 18px;
+}
+
+.about-image {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-image img {
+    width: 80%; 
+    height: auto; 
+    border-radius: 8px;
+}
+
+  
+  /* Features Section */
+  #features {
+    background-color: #f1f1f1;
+    padding: 60px 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  #features div {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  #features h3 {
+    color: #333;
+  }
+  
+  #features p {
+    color: #666;
+  }
+  
+  /* Partners Section */
+  #partners {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  #partners h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .partner-logos p {
+    font-size: 1.1rem;
+    color: #555;
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  /* App Features Section */
+  #app-features {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .app-features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+  }
+  
+  .app-features div {
+    max-width: 300px;
+  }
+  
+  .app-features h3 {
+    color: #333;
+  }
+  
+  /* Testimonials Section */
+  #testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #testimonials blockquote {
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  
+  #testimonials cite {
+    font-size: 1.1rem;
+    color: #ff5733;
+    font-weight: bold;
+  }
+  
+  /* News Section */
+  #news {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  #news h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #news article {
+    margin: 20px 0;
+  }
+  
+  #news article h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  #news article button {
+    padding: 8px 16px;
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #news article button:hover {
+    background-color: #e94e1b;
+  }
+
+  /* Modal styling */
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #777;
+  }
+  
+  
