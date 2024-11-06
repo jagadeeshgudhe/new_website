@@ -41,3 +41,14 @@ document.querySelectorAll('#testimonials blockquote').forEach((quote, index) => 
         });
     });
 });
+
+
+
+//overlaying the team//
+  function showTeamOverlay() {
+      document.getElementById('team-overlay').style.display = 'flex';
+  }
+
+  function hideTeamOverlay() {
+      document.getElementById('team-overlay').style.display = 'none';
+  }
