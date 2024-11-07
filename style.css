@@ -126,10 +126,9 @@ html {
   filter: brightness(1.3); 
 }
 
-/* Button Styling */
-button {
-  background-color: #ff6a00;
-  color: #fff;
+.blink-button {
+  background-color: #5a75e0;
+  color: #efdcdc;
   border: none;
   border-radius: 5px;
   padding: 12px 24px;
@@ -137,25 +136,49 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   outline: none;
+  animation: blink 0.6s infinite;
 }
 
-button:hover {
-  background-color: #830b0b;
+
+.blink-button:hover {
+  background-color: #2cb40a;
   transform: scale(1.55);
   filter: brightness(1.8);
 }
 
-/* Animation Keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(10);
-  }
-  to {
+@keyframes blink {
+  0% {
     opacity: 1;
-    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
+
+.blinking-image {
+  animation: blinkImage 1.5s infinite; 
+}
+
+
+@keyframes blinkImage {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
 
 
 
@@ -167,7 +190,7 @@ button:hover {
     flex-direction: row;
     align-items: center;
     padding: 100px 20px;
-    background-color: #f5fafa;
+    background-color: #ecf2f2;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
   }
@@ -340,13 +363,13 @@ button:hover {
   }
   
   .about-image img {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     transition: transform 0.3s ease;
   }
   
   .about-image img:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
   
   
@@ -397,7 +420,7 @@ button:hover {
 }
 
 .features-content {
-  flex: 0 0 35%;
+  flex: 10 5 45%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -414,9 +437,9 @@ button:hover {
 }
 
 .features-image {
-  flex: 0 0 50%;
+  flex: 0 0 45%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -424,11 +447,11 @@ button:hover {
   width: 80%;
   height: auto;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 1.0s ease, box-shadow 1s ease;
 }
 
 .features-image:hover img {
-  transform: scale(1.4);
+  transform: scale(1.2);
   box-shadow: 0 8px 16px rgba(14, 5, 171, 0.3);
 }
 
@@ -446,28 +469,30 @@ button:hover {
 }
 
 #partners h2 {
-  font-size: 1.8rem;
-  color: #333;
+  font-size: 2.5rem;
+  color: #134707;
 }
 
 .partner-logos p {
-  font-size: 1.1rem;
-  color: #a92d07;
+  font-size: 2rem;
+  color: #060700;
   display: inline-block;
   margin: 0 15px;
-  transition: transform 0.1s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .partner-logos p:hover {
-  animation: vibrate 0.2s infinite;
+  transform: scale(4);
+  animation: vibrate 0.5s;
+  
 }
 
 @keyframes vibrate {
   0% { transform: translate(0); }
-  25% { transform: translate(1px, -1px); }
+  25% { transform: translate(-1px, -1px); }
   50% { transform: translate(-1px, 1px); }
   75% { transform: translate(1px, 1px); }
-  100% { transform: translate(-1px, -1px); }
+  100% { transform: translate(1px, 1px); }
 }
 
 
@@ -557,25 +582,13 @@ button:hover {
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
-  color: #fff; 
-  transition: transform 5s ease-in-out;
+  color: #c2cdc2; 
+  transition: transform 1s ease-in-out;
 }
 
-.vibrate-effect:hover {
-  animation: vibration 0.5s ease infinite;
+.transform:hover {
+    transform: scale(2);
 }
-
-@keyframes vibration {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(5px); }
-  50% { transform: translateX(-5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(5px); }
-}
-
-
-
-
 
   /* Testimonials Section */
   #testimonials {
@@ -585,20 +598,20 @@ button:hover {
 }
 
 #testimonials h2 {
-    font-size: 2rem;
-    color: #333;
+    font-size: 3rem;
+    color: #0f0101;
     margin-bottom: 20px;
 }
 
 #testimonials h3 {
-    font-size: 1.5rem;
-    color: #555;
+    font-size: 1.8rem;
+    color: #b51261;
     margin-bottom: 20px;
 }
 
 .testimonial-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -612,17 +625,17 @@ button:hover {
     text-align: center;
     width: 250px;
     min-width: 250px;
-    transition: transform 0.2s ease, box-shadow 0.7s ease;
+    transition: transform 0.1s ease, box-shadow 0.7s ease;
 }
 
 .testimonial:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(214, 211, 10, 0.2);
+    transform: translateY(-20px);
+    box-shadow: 0 8px 16px rgba(0, 6, 7, 0.2);
 }
 
 .testimonial p {
     font-size: 1rem;
-    color: #555;
+    color: #9a0707;
     margin-bottom: 10px;
 }
 
@@ -636,7 +649,7 @@ button:hover {
 .testimonial span {
     display: block;
     font-weight: bold;
-    color: #333;
+    color: #120303;
 }
 
 
@@ -645,6 +658,7 @@ button:hover {
   #team {
     text-align: center;
     padding: 40px 20px;
+    background-color: #cfedee;
 }
 
 .team-grid {
@@ -667,11 +681,17 @@ button:hover {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #007BFF;
-    color: #fff;
+    color: #e1dada;
     border: none;
     cursor: pointer;
     font-size: 1rem;
 }
+
+.team-image:hover {
+  transform: scale(3); 
+  box-shadow: 0 8px 15px rgba(201, 21, 21, 0.2);
+}
+
 
 /* Overlay Style */
 .overlay {
@@ -692,6 +712,7 @@ button:hover {
     width: 80%;
     justify-content: space-between;
 }
+
 
 .overlay-member {
     text-align: center;
@@ -714,7 +735,7 @@ button:hover {
   #news {
     text-align: center;
     padding: 40px 20px;
-    background-color: #eed4d4;
+    background-color: #faf5f5;
   }
   
   .news-container {
@@ -724,7 +745,7 @@ button:hover {
   }
   
   article {
-    background-color: #a1e0d7;
+    background-color: #b7ab69;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -734,7 +755,7 @@ button:hover {
   
   article img {
     width: 100%; 
-    height: 200px; 
+    height: 300px; 
     object-fit: cover;
     border-radius: 8px;
   }
@@ -745,7 +766,7 @@ button:hover {
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #209f24;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -755,7 +776,8 @@ button:hover {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #287908;
+    
   }
   
   /* Modal styling */
@@ -768,7 +790,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(143, 30, 30, 0.5);
 }
 
   .modal-content {
@@ -788,36 +810,49 @@ button:hover {
   }
 
 
-  /*Faq section*/
-  #faq {
-    padding: 40px;
-    background-color: #f9f9f9;
-    text-align: center;
+/* FAQ Section Styling */
+#faq {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 #faq h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
 }
 
 .faq-question {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #444;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.faq-answer {
-    font-size: 1rem;
-    color: #555;
-    display: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .faq-question:hover {
-    color: #007BFF;
+  color:red;
+  background-color:#010a16;
 }
+
+/* Hidden by default */
+.faq-answer {
+  font-size: 1rem;
+  color: #037d1f;
+  background-color: greenyellow;
+  display: none; /* Hide initially */
+  margin-top: 5px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
 
 
 /*communication*/

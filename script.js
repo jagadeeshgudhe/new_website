@@ -27,3 +27,8 @@ document.getElementById("discover-more-btn").addEventListener("click", function(
   function hideTeamOverlay() {
       document.getElementById('team-overlay').style.display = 'none';
   }
+
+
+
+
+
