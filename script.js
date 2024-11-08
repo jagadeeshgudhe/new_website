@@ -1,31 +1,41 @@
-//signup and login navigation
+//sign up and login 
+
 function signup(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
-    localStorage.setItem('username', username);
-    localStorage.setItem('password', password);
+  const username = document.getElementById('signup-username').value;
+  const password = document.getElementById('signup-password').value;
 
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+  const userExists = users.some(user => user.username === username);
+
+  if (userExists) {
+    alert('Username or password is already taken  Please choose a different one.');
+  } else {
+    users.push({ username, password });
+    localStorage.setItem('users', JSON.stringify(users));
     alert('Signup successful! You can now log in.');
     window.location.href = 'login.html';
   }
-
+}
 
 function login(event) {
-    event.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
-    if (username === storedUsername && password === storedPassword) {
-      alert('Login successful!');
-      window.location.href = 'welcome.html';
-    } 
-    else {
-      alert('Invalid username or password.');
-    }
+  event.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+  const user = users.find(user => user.username === username && user.password === password);
+
+  if (user) {
+    alert('Login successful!');
+    window.location.href = 'welcome.html';
+  } else {
+    alert('Invalid username or password.');
   }
+}
+
 
 
 
