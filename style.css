@@ -9,6 +9,16 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Wrapper to center content on larger screens */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px; /* Adds padding for small screens */
 }
 
 /* Header styling */
@@ -16,10 +26,11 @@ header {
   background-color: #333;
   padding: 1em 0;
   text-align: center;
-  position: sticky;
+  position:sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 /* Navigation styling */
@@ -29,7 +40,7 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -53,6 +64,46 @@ nav ul li a:hover {
 html {
   scroll-behavior: smooth;
 }
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 0.5em 0;
+  }
+
+  nav ul li a {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
 
 /* Hero Section */
 #hero {
@@ -163,9 +214,12 @@ html {
 
 #stats h2 {
   font-size: 2.5rem;
-  color: #041e07;
-  margin-bottom: 40px;
-  text-align: center; /* Changed from flex-end to center for better alignment on mobile */
+  font-weight: bold;
+  color: #010a00;
+  width: 20%;
+  text-align: start;
+  margin-bottom: 20px;
+   
 }
 
 #stats-container {
@@ -197,7 +251,7 @@ html {
 
 #stats div:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 20px rgba(141, 13, 13, 0.15);
 }
 
 #stats h3 {
@@ -210,8 +264,8 @@ html {
 }
 
 #stats p {
-  color: #777;
-  font-size: 1rem;
+  color: #130101;
+  font-size: 1.5rem;
   margin-top: 5px;
   animation: fadeInUp 0.8s ease-out 0.3s;
 }
@@ -219,7 +273,7 @@ html {
 .logo-container {
   width: 100px; /* Adjust width as needed */
   height: 80px; /* Adjust height as needed */
-  border: 3px solid #020900;
+  border: 3px solid #f77dce;
   border-radius: 20%; /* Square box with rounded corners */
   display: flex;
   justify-content: center;
@@ -237,12 +291,12 @@ html {
 }
 
 .logo-container:hover {
-  background-color: #a7bec0;
+  background-color: #f7f9fa;
   transform: scale(1.1);
 }
 
 .logo-container:hover i {
-  color: #0a0101;
+  color: #0f0800;
 }
 
 @keyframes fadeInUp {
@@ -475,20 +529,23 @@ button:hover {
 
 /* App Features Section */
 #app-features {
-  background-color: #dcd3d8;
+  background-color: #f5edf2;
   padding: 60px 20px;
   text-align: center;
 }
 
 #app-features h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #010a00;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 20px;
 }
 
 #app-features p {
   font-size: 1.2rem;
-  color: #555;
+  color: #ac1334;
   margin-bottom: 30px;
 }
 
@@ -574,8 +631,11 @@ button:hover {
 }
 
 #testimonials h2 {
-  font-size: 3rem;
-  color: #0f0101;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #010a00;
+  width: 100%;
+  text-align: start;
   margin-bottom: 20px;
 }
 
@@ -800,13 +860,13 @@ button:hover {
 /* FAQ Section Styling */
 #faq {
   padding: 40px;
-  background-color: #f9f9f9;
+  background-color: #464040;
   text-align: center;
 }
 
 #faq h2 {
   font-size: 2rem;
-  color: #333;
+  color: #ff1d1d;
   margin-bottom: 20px;
 }
 
@@ -817,7 +877,7 @@ button:hover {
 .faq-question {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #444;
+  color: #faf1f1;
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 10px;
@@ -842,7 +902,7 @@ button:hover {
 
 /* Communication */
 #contact {
-  background-color: #f1f1f1;
+  background-color: #fefbfb;
   padding: 60px 20px;
   text-align: center;
 }
@@ -850,7 +910,7 @@ button:hover {
 #contact h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #7a4acb;
 }
 
 #contact p {
