@@ -50,7 +50,7 @@ function login(event) {
     currentIndex = (currentIndex + 1) % images.length;
     document.getElementById("slider-image").src = images[currentIndex];
   }
-  setInterval(changeImage, 1000);
+  setInterval(changeImage, 3000);
   
 
 
