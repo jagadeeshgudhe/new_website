@@ -40,7 +40,11 @@ function login(event) {
 
 
 //image changing 
-
+  const images = [
+    "images/hero-image1.jpg",
+    "images/hero-image2.jpg",
+    "images/hero-image3.jpg"
+  ];
   let currentIndex = 0;
   function changeImage() {
     currentIndex = (currentIndex + 1) % images.length;
