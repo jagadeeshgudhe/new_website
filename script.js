@@ -8,13 +8,14 @@ function signup(event) {
 
   const users = JSON.parse(localStorage.getItem('users')) || [];
   const userExists = users.some(user => user.username === username);
-
+  console.log(username,password,'hello')
   if (userExists) {
     alert('Username or password is already taken  Please choose a different one.');
+
   } else {
     users.push({ username, password });
     localStorage.setItem('users', JSON.stringify(users));
-    alert('Signup successful! You can now log in.');
+    alert(`Signup successfully! Username: ${username},Password: ${password}`);
     window.location.href = 'login.html';
   }
 }
