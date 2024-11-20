@@ -200,10 +200,14 @@ html {
   background-color: #bbe9ef;
   box-shadow: 0 4px 12px red;
   font-family: Arial, sans-serif;
+  width: 100%;
 }
 
 #stats h2 {
-  font-size: 2.5rem;
+  flex-direction: column
+  
+  ;
+  font-size: 1.5 rem;
   font-weight: bold;
   color: #010a00;
   width: 20%;
@@ -221,15 +225,6 @@ html {
   max-width: 100px;
 }
 
-@media (max-width: 768px) {
-  #stats-container {
-      flex-direction: column;
-      gap: 40px;
-  }
-  nav ul {
-      flex-direction: column;
-  }
-}
 
 
 #stats div {
@@ -289,16 +284,7 @@ html {
   color: #0f0800;
 }
 
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
+
 
 /* About Section */
 .about-section {
@@ -306,6 +292,7 @@ html {
   align-items: center;
   padding: 40px;
   background-color: #fff;
+  width: 100%;
 }
 
 .about-text {
@@ -389,12 +376,16 @@ button:hover {
   transform: scale(1.3);
 }
 
+
+
+
 /* Features Section */
 .features-section {
   position: relative;
   padding: 40px;
   background-color: #c2eef6;
   overflow: hidden;
+  width: 100%;
 }
 
 .blurred-background {
@@ -475,6 +466,9 @@ button:hover {
   box-shadow: 0 8px 16px rgba(14, 5, 171, 0.3);
 }
 
+
+
+
 /* Partners Section Styling */
 #partners {
   text-align: center;
@@ -484,7 +478,9 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  width: 100%;
 }
+
 
 #partners h2 {
   font-size: 2.2rem;
@@ -517,11 +513,15 @@ button:hover {
   }
 }
 
+
+
+
 /* App Features Section */
 #app-features {
-  background-color: #f5edf2;
+  background-color: #a7d8e9;
   padding: 60px 20px;
   text-align: center;
+  width: 100%;
 }
 
 #app-features h2 {
@@ -599,6 +599,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   height: 300px;
+  width: 100%;
 }
 
 #strategic-plan h2 {
@@ -618,6 +619,7 @@ button:hover {
   text-align: center;
   padding: 40px;
   background-color: #f9f9f9;
+  width: 100%;
 }
 
 #testimonials h2 {
@@ -681,8 +683,10 @@ button:hover {
 /* Team Members */
 #team {
   text-align: center;
+  font-size: rem;
   padding: 40px 20px;
   background-color: #cfedee;
+  width: 100%;
 }
 
 .team-grid {
@@ -730,6 +734,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  width: 100%;
 }
 
 .overlay-content {
@@ -761,6 +766,7 @@ button:hover {
   text-align: center;
   padding: 40px 20px;
   background-color: #faf5f5;
+  width: 100%;
 }
 
 .news-container {
@@ -852,6 +858,7 @@ button:hover {
   padding: 40px;
   background-color: #464040;
   text-align: center;
+  width: 100%;
 }
 
 #faq h2 {
@@ -892,7 +899,7 @@ button:hover {
 
 /* Communication */
 #contact {
-  background-color: #fefbfb;
+  background-color: #f5f537;
   padding: 60px 20px;
   text-align: center;
 }
@@ -1104,6 +1111,8 @@ footer p {
       margin: 0 10px;
   }
 
+
+  
   /* Testimonials Section */
   .testimonial-grid {
       flex-direction: column;
