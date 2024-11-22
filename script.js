@@ -12,7 +12,11 @@ function signup(event) {
   if (userExists) {
     alert('Username or password is already taken  Please choose a different one.');
 
- 
+  } else {
+    users.push({ username, password });
+    localStorage.setItem('users', JSON.stringify(users));
+    alert(`Signup successfully! \n Username: ${username} \n Password: ${password}`);
+    window.location.href = 'login.html';
   }
 }
 
