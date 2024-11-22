@@ -1,24 +1,6 @@
 //sign up and login 
 
-function signup(event) {
-  event.preventDefault();
 
-  const username = document.getElementById('signup-username').value;
-  const password = document.getElementById('signup-password').value;
-
-  const users = JSON.parse(localStorage.getItem('users')) || [];
-  const userExists = users.some(user => user.username === username);
-  console.log(username,password,'hello')
-  if (userExists) {
-    alert('Username or password is already taken  Please choose a different one.');
-
-  } else {
-    users.push({ username, password });
-    localStorage.setItem('users', JSON.stringify(users));
-    alert(`Signup successfully! \n Username: ${username} \n Password: ${password}`);
-    window.location.href = 'login.html';
-  }
-}
 
 function login(event) {
   event.preventDefault();
